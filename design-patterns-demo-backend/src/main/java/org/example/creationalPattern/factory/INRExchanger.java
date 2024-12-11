@@ -2,10 +2,14 @@ package org.example.creationalPattern.factory;
 
 public class INRExchanger implements CurrencyExchanger {
 
-    private double exchangeRate;
+    private final double exchangeRate;
+
+    public INRExchanger(double exchangeRate) {
+        this.exchangeRate = exchangeRate;
+    }
 
     @Override
     public Double Calculate(Double gbp) {
-        return 0.0;
+        return exchangeRate*gbp;
     }
 }

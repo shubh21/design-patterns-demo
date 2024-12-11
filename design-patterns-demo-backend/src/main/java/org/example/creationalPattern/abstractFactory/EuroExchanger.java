@@ -1,6 +1,6 @@
-package org.example.creationalPattern.factory;
+package org.example.creationalPattern.abstractFactory;
 
-public class EuroExchanger implements CurrencyExchanger {
+public class EuroExchanger implements Exchanger {
 
     private final double exchangeRate;
 
@@ -9,8 +9,7 @@ public class EuroExchanger implements CurrencyExchanger {
     }
 
     @Override
-    public Double Calculate(Double gbp) {
-
+    public double exchange(double gbp) {
         return this.exchangeRate*gbp;
     }
 }
